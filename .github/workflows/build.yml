@@ -1,17 +1,26 @@
 name: Build Stella APK
-on: workflow_dispatch:
+
+on:
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
+
       - uses: android-actions/setup-android@v3
-      - run: chmod +x gradlew || true
+
+      - run: chmod +x gradlew
+
       - run: ./gradlew assembleDebug
+
       - uses: actions/upload-artifact@v4
         with:
           name: stella-debug-apk
