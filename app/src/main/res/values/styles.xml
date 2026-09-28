@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.Stella" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">#090B0F</item>
+        <item name="android:statusBarColor">#090B0F</item>
+    </style>
+</resources>
